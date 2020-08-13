@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { Image } from 'react-bootstrap';
 import { Container } from './styles';
 import * as UserActions from './../../store/modules/user/actions';
 
@@ -25,7 +24,7 @@ export default function Header() {
     <Container>
       <div className="user-menu">
         {user.picture ? (
-          <Image src={user.picture} roundedCircle />
+          <img src={user.picture} alt="User" />
         ) : (
           <p className="no-data img" />
         )}
