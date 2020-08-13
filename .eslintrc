@@ -1,0 +1,46 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "plugins": ["react", "jsx-a11y", "import", "react-hooks"],
+  "rules": {
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "import/no-unresolved": "off",
+    "import/no-useless-path-segments": "off",
+    "array-callback-return": "off",
+    "no-console": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/button-has-type": "off",
+    "react/forbid-prop-types": "off",
+    "react/require-default-props": "off",
+    "no-plusplus": "off",
+    "implicit-arrow-linebreak": "off",
+    "comma-dangle": "off",
+    "object-shorthand": "off",
+    "react/jsx-curly-newline": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "object-curly-newline": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "react-hooks/rules-of-hooks": "off",
+    "operator-linebreak": "off",
+    "consistent-return": "off",
+    "react/destructuring-assignment": "off",
+    "react/jsx-boolean-value": "off",
+    "no-param-reassign": "off",
+    "no-case-declarations": "off",
+    "no-confusing-arrow": "off",
+    "function-paren-newline": "off",
+    "no-else-return": "off"
+  }
+}
