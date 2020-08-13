@@ -1,10 +1,9 @@
 # IMDb
 
-### Deploy
-~
+## Deploy
 
-### Start project
+## Start project
 npm run start
 
-### Tests
+## Tests
 npm run test
