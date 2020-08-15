@@ -11,10 +11,15 @@ export default createGlobalStyle`
   body {
         background: #141414;
         -webkit-font-smoothing: antialiased;
+        color: white;
     }
 
     body, input, button {
         font: 14px sans-serif;
+    }
+
+    #main__layout {
+      margin-top: 100px;
     }
 
     button {

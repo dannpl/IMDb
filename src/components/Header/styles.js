@@ -2,12 +2,15 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  position: relative;
+  position: fixed;
+  left: 0;
+  top: 0;
   width: 100%;
   align-items: center;
   justify-content: space-between;
   padding: 0px 40px;
   height: 68px;
+  z-index: 10;
   background-color: #141414;
 
   @media (max-width: 768px) {
@@ -45,6 +48,7 @@ export const Container = styled.div`
         right: 10px;
         color: white;
         font-size: 16px;
+        cursor: pointer;
       }
 
       input {

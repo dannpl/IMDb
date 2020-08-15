@@ -10,7 +10,7 @@ export default function Routes() {
       <Redirect exact to="/movies" from="/" />
 
       <Route path="/movies" exact component={Movies} />
-      <Route path="/movie:id" exact component={Movie} />
+      <Route path="/movie/:id" exact component={Movie} />
     </Switch>
   );
 }
