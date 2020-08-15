@@ -1,36 +1,30 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+import { Search } from 'react-bootstrap-icons';
 
+import Logo from '../../assets/imgs/logo.png';
 import { Container } from './styles';
-import * as UserActions from './../../store/modules/user/actions';
 
 export default function Header() {
-  const user = useSelector((state) => state.user);
-
-  const dispatch = useDispatch();
-
-  const getUser = async () => {
-    const userStorage = sessionStorage.getItem('user');
-    if (userStorage) {
-      return dispatch(UserActions.setUser(JSON.parse(userStorage)));
-    }
-  };
-
-  useEffect(() => {
-    getUser();
-  }, []);
+  const user = useSelector((state) => state.user.user);
 
   return (
     <Container>
-      <div className="user-menu">
-        {user.picture ? (
-          <img src={user.picture} alt="User" />
-        ) : (
-          <p className="no-data img" />
-        )}
-        <div variant="success" className="name" to="/profile">
-          {user.name ? user.name : <p className="no-data" />}
+      <div className="header__left">
+        <NavLink to="/movies">
+          <img src={Logo} alt="Logo" />
+        </NavLink>
+      </div>
+      <div className="header__center">
+        <div className="wrapper__input">
+          <Search className="search__icon" />
+          <input placeholder="Search" />
         </div>
+      </div>
+      <div className="header__right">
+        <div className="name">{user.name}</div>
+        <img src={user.picture} alt="User" />
       </div>
     </Container>
   );

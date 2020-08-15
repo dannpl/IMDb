@@ -2,43 +2,85 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
+  position: relative;
   width: 100%;
   align-items: center;
-  justify-content: flex-end;
-  padding: 0px 20px;
-  height: 70px;
-  background-color: #092f57;
+  justify-content: space-between;
+  padding: 0px 40px;
+  height: 68px;
+  background-color: #141414;
 
-  .user-menu {
+  @media (max-width: 768px) {
+    padding: 0px 10px;
+  }
+
+  .header__left {
+    flex: 1;
+    height: 100%;
+    img {
+      height: 100%;
+    }
+  }
+
+  .header__center {
+    flex: 1;
+
+    @media (max-width: 768px) {
+      flex: 3;
+      margin-left: 10px;
+    }
+
+    .wrapper__input {
+      width: 80%;
+      position: relative;
+      display: flex;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
+      .search__icon {
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        color: white;
+        font-size: 16px;
+      }
+
+      input {
+        color: white;
+        padding: 0px 30px 0px 15px;
+        width: 100%;
+        height: 35px;
+        background-color: transparent;
+        border: 1px solid white;
+
+        ::placeholder {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .header__right {
+    flex: 1;
     display: flex;
+    justify-content: flex-end;
     align-items: center;
 
-    .no-data {
-      &.img {
-        height: 45px;
-        margin: auto;
-        border-radius: 100%;
-        width: 45px;
-      }
+    img {
+      border-radius: 100%;
     }
 
     .name {
       color: white;
       font-size: 15px;
-      margin-left: 10px;
+      margin-right: 10px;
       text-decoration: none;
       font-weight: bold;
-      cursor: pointer;
 
-      &:hover {
-        color: #61dafb;
-      }
-
-      .no-data {
-        height: 1rem;
-        margin: auto;
-        border-radius: 2px;
-        width: 120px;
+      @media (max-width: 768px) {
+        display: none;
       }
     }
   }
